@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="row1.css">
+</head>
+<body class="row1">
+	 <div class="row " style="background-color: #87ceeb" >
+	 	<div class="col-md-12">
+ 		<center><h1 >Indian Financial Market Analysis</h1></center>
+ 		</div>
+ 	</div>
+  <div class="row border" >
+		<div class="col-md-6 row1" style="background-color: yellow">
+			<center>
+			<h1>Get graph by index names</h1><br><br>
+			<table >
+			
+			<tr><td>Index name:</td><td>
+				<select id="indices">
+			<%for ( var i = 0; i < arr.length; i++ ){%>
+			<option value="<%=arr[ i ] %>" ><%=arr[i] %></option>
+			<%}%>	
+			</select></td></tr>
+			<tr><td>From Date:</td><td><input type="date" name="fromd"></td></tr>
+			<tr><td>To Date:</td><td><input type="date" name="tod"></td></tr></table><br><br>
+			<center><button type="button" class="btn btn-success">Submit</button></center>
+			
+			</center>
+
+		</div>
+		
+		<div class="col-md-6 row1" style="background-color: pink">
+			<center>
+			<h1>get indices by time </h1><br><br>
+			<table>
+			<tr><td> Date:</td><td><input type="date" name="d"></td></tr>
+			<tr><td>Previous days:</td><td><input type="number" name="prevdays"></td></tr>
+			
+			  <tr><td><label><input type="radio" name="radio" checked>Grown</label></td>
+			
+			
+			  <label><td><input type="radio" name="radio">Fallen</label></td></tr></table>
+			  <br><br>
+			
+			<center><button type="button" class="btn btn-success">Submit</button></center>
+			
+			</center>
+
+		</div>	
+</div>
+ 
+</body>
+</html>
